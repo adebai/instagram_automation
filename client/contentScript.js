@@ -103,7 +103,7 @@ let html = `<div class="inau_template">
 </div>`;
 
 let templatesDiv = document.querySelector(".inau_templates");
-let os = window.navigator.userAgent.indexOf("Mac") != -1 ? "mac" : "others";
+let os = window.navigator.userAgent.indexOf("Mac")  != -1 ? "mac" : "others";
 let displayTemplates = (e, i) => {
     e.index = i+1;
     e.platformCommand = os == "mac" ? "<span class='inau_ctr'>⌘</span> <span class='inau_ctr'>⌥</span>" : "<span class='inau_ctr'>ctrl</span>  <span class='inau_ctr'>alt</span>";
