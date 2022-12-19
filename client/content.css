@@ -115,12 +115,32 @@
     padding:6px 11px;
 }
 
+.inau_template_message_excerpt {
+    cursor: pointer;
+}
+
+.inau_copied {
+    margin: 0 5px;
+    display: none;
+    transition: all 3s ease;
+    transition-property: var(--faint-purple);
+    color:rgb(13, 208, 13);
+}
+
 .inau_shortcut {
     padding:6px 11px;
     color: #9398b6;
 }
 
-.inau_shortcut_help {
+.inau_instruction {
+    padding:10px 11px;
+    margin: 10px 11px;
+}
+.inau_instruction p {
+    margin: 0;
+}
+
+.inau_shortcut_help, .inau_instruction {
     color: #9398b6;
     text-align: center;
 }
@@ -138,6 +158,42 @@
 
 .inau_margin-bottom {
     margin-bottom: 4px;
+}
+
+.inau_side {
+    position: absolute;
+    left:20px;
+    bottom:20px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: var(--purple);
+    text-align: center;
+    line-height: 80px;
+    vertical-align: middle;
+}
+
+.inau_side img {
+    animation: slow-wobble 8s linear 0s infinite;
+}
+
+@keyframes slow-wobble {
+    0% {
+        margin-top: 0px;
+    }
+    30% {
+        margin-top: 10px;
+    }
+    70% {
+        margin-top: -10px;
+    }
+    80% {
+        margin-top: -15px;
+    }
+    100% {
+        margin-top: -5px;
+    }
+
 }
 
 :root {

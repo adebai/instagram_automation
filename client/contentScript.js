@@ -83,11 +83,12 @@ let templates = [
 let html = `<div class="inau_template">
     <div class="inau_template_head">
     <p class="inau_template_name">{{template.name}}
+        <span class="inau_copied" id="copy-{{template.id}}">Copied! ✅</span>
         <span class="inau_delete">🗑️</span>
     </p>
     </div>
     <div class="inau_template_body">
-        <p class="inau_template_message_excerpt inau_click_to_reveal" data-templateId="{{template.id}}">{{template.message}}</p>
+        <p class="inau_template_message_excerpt inau_click_to_reveal" data-templateId="{{template.id}}" onclick="copyText({{template.id}})">{{template.message}}</p>
     </div>
     <div class="inau_template_footer">
         <button class="inau_edit_template">✏️ Edit</button>
@@ -106,6 +107,7 @@ let templatesDiv = document.querySelector(".inau_templates");
 let os = window.navigator.userAgent.indexOf("Mac")  != -1 ? "mac" : "others";
 let displayTemplates = (e, i) => {
     e.index = i+1;
+    e.id = i;
     e.platformCommand = os == "mac" ? "<span class='inau_ctr'>⌘</span> <span class='inau_ctr'>⌥</span>" : "<span class='inau_ctr'>ctrl</span>  <span class='inau_ctr'>alt</span>";
     if(e.index > 9 ) e.index = 0;
     e.indexText = "<span class='inau_ctr'>" + e.index + "</span>";
@@ -120,3 +122,12 @@ let replaceContent = (html, template, identifier) => {
     return html;
 };
 templates.forEach(displayTemplates);
+let copyText = (id) => {
+    navigator.clipboard.writeText(templates[id].message);
+    setTimeout(()=>{
+        document.getElementById("copy-"+id).style.display = "inline";
+        setTimeout(()=>{
+            document.getElementById("copy-"+id).style.display = "none";
+        }, 1000)
+    },200)
+}
