@@ -1,0 +1,146 @@
+.inau_frame {
+    position: absolute;
+    z-index:9999999;
+    margin: 0;
+    top:0;
+    right: 0;
+    border-radius: 0px;
+    border: 5px solid var(--purple);
+    height: calc( 100vh);
+}
+.inau_size_1 {
+    width: 350px;
+}
+
+.inau_main {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.inau_menu {
+    display: contents;
+    height: 80px;
+    max-height: 80px;
+
+}
+.inau_templates {
+    background-color: #fcfcfd;
+    display: flex;
+    flex-direction: column;
+}
+.inau_new {
+    cursor: pointer;
+    border:1px solid var(--faint-purple);
+    box-shadow: .1px .1px 5px .1px #fcfcfd;
+    background-color: white;
+    height: 60px;
+    border-radius: 8px;
+    color: var(--purple);
+    font-weight: 600;
+    width: 94%;
+    font-size: large;
+    margin-left: 3%;
+    margin-top: 30px;
+}
+
+.inau_template {
+    border-radius: 6px;
+    box-shadow: .1px .1px 10px .1px rgba(0,0,0,.1);
+    padding: 10px;
+    margin: 10px;
+}
+
+.inau_template_name {
+    font-weight: 600;
+    color: #00106d;
+}
+
+.inau_template_body {
+    color: #4e599b;
+}
+
+.inau_header {
+    position: relative;
+    top:0;
+    height: 40px;
+    background-color: var(--purple);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c1bbff;
+}
+
+.inau_head {
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.inau_brand_name {
+    color: white;
+    font-weight: 600;
+    padding-right: 2px;
+}
+
+.inau_right_arrow {
+    color: white;
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+.inau_right_arrow, .inau_shortcut, .inau_delete {
+    float: right;
+}
+
+.inau_footer {
+    background-color: #f0f1fb;
+    color: #8890be;
+    margin-top:50px;
+    padding: 8px 20px;
+    text-align:center;
+    font-size: small;
+}
+
+.inau_footer a {
+    color: #a09afb;
+}
+
+.inau_footer p {
+    margin: 0;
+}
+
+.inau_edit_template {
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #a09afb;
+    color: #6154fe;
+    background-color: white;
+    padding:6px 11px;
+}
+
+.inau_shortcut {
+    padding:6px 11px;
+    color: #9398b6;
+}
+
+.inau_shortcut_help {
+    color: #9398b6;
+    text-align: center;
+}
+
+.inau_ctr {
+    color:#4e599b;
+    text-align: center;
+    background-color: #edeef5;
+    padding: 2px 5px;
+    margin: 0 2px;
+    display: inline-block;
+    width: 30px;
+    border-radius: 5px;
+}
+
+.inau_margin-bottom {
+    margin-bottom: 4px;
+}
+
+:root {
+    --purple: #6355ff;
+    --faint-purple: #6355ff90;
+}

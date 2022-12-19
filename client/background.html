@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="dataTables.bootstrap5.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery.dataTables.min.js"></script>
+    <script src="dataTables.bootstrap5.min.js"></script>
+    <script src="background.js"></script>
+</head>
+<body>
+    <textarea id="ta" style="display:none"></textarea>
+    <select name="perPage" id="perPage">
+        <option disabled selected>Select results per page</option>
+        <option value="25">25</option>
+        <option value="25">50</option>
+        <option value="25">75</option>
+        <option value="25">100</option>
+    </select>
+    <button id="showPages">Show pages</button>
+    <select name="page" id="page">
+        <option disabled selected>Select starting page</option>
+    </select>
+    <button id="loadData">Load Data</button>
+
+    <table id="dataContainer" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Description</th>
+                <th>Content</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>#</th>
+                <th>Description</th>
+                <th>Content</th>
+                <th>Date</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

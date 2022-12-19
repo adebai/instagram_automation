@@ -1,0 +1,31 @@
+{
+    "name": "Instagram Automation",
+    "version": "0.0.1",
+    "manifest_version": 1,
+    "description": "Automate your instagram DM",
+    "permissions": [
+        "clipboardRead",
+        "contextMenus",
+        "tabs"
+    ],
+    "background": {
+        "persistent": true,
+        "page": "background.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://instagram.com/*",
+                "https://instagram.com/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ],
+            "html": [
+                "index.html"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ]
+}
