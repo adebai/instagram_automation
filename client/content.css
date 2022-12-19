@@ -174,24 +174,24 @@
 }
 
 .inau_side img {
-    animation: slow-wobble 8s linear 0s infinite;
+    animation: slow-wobble 4s linear 0s infinite;
 }
 
 @keyframes slow-wobble {
     0% {
         margin-top: 0px;
     }
-    30% {
-        margin-top: 10px;
+    450% {
+        margin-top: 5px;
     }
     70% {
-        margin-top: -10px;
+        margin-top: -3px;
     }
     80% {
-        margin-top: -15px;
+        margin-top: -5px;
     }
     100% {
-        margin-top: -5px;
+        margin-top: 0px;
     }
 
 }
