@@ -150,3 +150,13 @@ maximize.addEventListener("click", function(event) {
 })
 
 
+/**
+ * TO-DO:
+ * 1. Add a feature to copy to clipboard when user use shortcut
+ * 2. Add a feature to show user a success upon copy
+ * 3. Add save/edit/delete feature
+ * 4. Add pointer cursor to elements
+ * 5. Add into extension build
+ */
+
+
