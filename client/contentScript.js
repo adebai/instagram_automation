@@ -131,3 +131,22 @@ let copyText = (id) => {
         }, 1000)
     },200)
 }
+
+/**
+ * 
+ * Click events
+ * 
+ */
+let minimise = document.querySelector('.inau_right_arrow');
+let maximize = document.querySelector('.inau_side');
+minimise.addEventListener("click", function(event) {
+    document.querySelector('.inau_frame').classList.replace("inau_size_1", "inau_size_0");
+    document.querySelector('.inau_side').classList.remove("inau_size_0");
+})
+
+maximize.addEventListener("click", function(event) {
+    document.querySelector('.inau_frame').classList.replace("inau_size_0", "inau_size_1");
+    document.querySelector('.inau_side').classList.add("inau_size_0");
+})
+
+

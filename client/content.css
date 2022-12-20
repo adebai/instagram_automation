@@ -8,7 +8,27 @@
     border: 5px solid var(--purple);
     height: calc( 100vh);
 }
+
+.inau_size_0 {
+    width: 0px;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+* {
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 .inau_size_1 {
+    width: 350px;
+}
+
+.inau_size_2 {
+    width: 350px;
+}
+
+.inau_size_3 {
     width: 350px;
 }
 
@@ -83,6 +103,11 @@
     color: white;
     margin-right: 10px;
     font-weight: 900;
+    padding:5px;
+}
+
+.inau_side, .inau_right_arrow {
+    cursor: pointer;
 }
 
 .inau_right_arrow, .inau_shortcut, .inau_delete {
