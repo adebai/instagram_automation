@@ -81,7 +81,7 @@ let demo = [
     },
 ];
 
-localStorage.setItem('templates', JSON.stringify(demo));
+if(!JSON.parse(localStorage.getItem('templates'))) localStorage.setItem('templates', JSON.stringify([]));
 let templates = JSON.parse(localStorage.getItem('templates'));
 
 let html = `<div class="inau_template">
@@ -108,6 +108,7 @@ let html = `<div class="inau_template">
 </div>`;
 
 let templatesDiv = document.querySelector(".inau_templates");
+templatesDiv.innerHTML = "";
 let os = window.navigator.userAgent.indexOf("Mac")  != -1 ? "mac" : "others";
 let displayTemplates = (e, i) => {
     e.index = i+1;
