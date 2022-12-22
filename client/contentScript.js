@@ -1,4 +1,4 @@
-let templates = [
+let demo = [
     {
         "name" : "Goldman Sachs",
         "message" : "Hi there! Thanks for reaching out, I would defeinitely love to help out with whatever questions you might have about the industry and what you want to know about all the industry best practices and customs.",
@@ -80,6 +80,10 @@ let templates = [
         "modified_at" : 1671443701717,
     },
 ];
+
+localStorage.setItem('templates', JSON.stringify(demo));
+let templates = JSON.parse(localStorage.getItem('templates'));
+
 let html = `<div class="inau_template">
     <div class="inau_template_head">
     <p class="inau_template_name">{{template.name}}
