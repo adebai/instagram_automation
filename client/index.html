@@ -43,7 +43,7 @@
                     <input class="inau_save" id="save" value="Save" type="submit" onclick=" let t = JSON.parse(localStorage.getItem('templates')); t.push({
                         name: document.getElementById('name').value,
                         message: document.getElementById('message').value
-                    }); localStorage.setItem('templates', JSON.stringify(t));templatesDiv.innerHTML = '';t.forEach(displayTemplates);document.querySelector('.inau_new_template').style.display='none';">
+                    }); localStorage.setItem('templates', JSON.stringify(t)); templates = t;templatesDiv.innerHTML = '';t.forEach(displayTemplates);document.querySelector('.inau_new_template').style.display='none';">
                     <input class="inau_cancel" value="Cancel" onclick="document.querySelector('.inau_new_template').style.display='none'" id="cancel" type="submit">
                 </div>
             </div>
