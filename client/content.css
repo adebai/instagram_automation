@@ -25,6 +25,21 @@
     padding: 8px;
 }
 
+.inau_save, .inau_cancel {
+    border: 1px solid var(--faint-purple);
+    background-color: #f8f7fe;
+    height: 35px;
+    padding:3px 12px;
+    margin:3px;
+    border-radius: 5px;
+}
+
+.inau_save {
+    background-color: var(--purple);
+    color: #fff;
+}
+
+
 .inau_input::placeholder {
     color: #9da7c6;
 }
